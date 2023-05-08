@@ -85,7 +85,7 @@ public class ScoresPage {
 	public void sortingGames() {
 		clickGameSortButton();
 		ArrayList<String> gameDataList = new ArrayList<>();
-		List<WebElement> elementList = driver.findElements(By.xpath("//*[@data-header='Game' and //a]"));
+		List<WebElement> elementList = driver.findElements(By.xpath(".//*[@data-header='Game' and //a]"));
 		for (WebElement we : elementList) {
 			gameDataList.add(we.getText());
 		}
