@@ -10,6 +10,7 @@ public class SortingTest extends BaseClass {
 	public void sortingByGames() {
 		logPage.logInSteps(configuration.get("user"), configuration.get("password"));
 		scoresPage.sortingGames();
+	
 		
 	}
 	

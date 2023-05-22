@@ -98,7 +98,9 @@ public class BaseClass {
 			driver = new SafariDriver();
 		} else {
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			ChromeOptions co = new ChromeOptions();
+			co.addArguments("--remote-allow-origins=*");
+			driver = new ChromeDriver(co);
 		}
 		return driver;
 	}
@@ -107,7 +109,7 @@ public class BaseClass {
 		waits = new CommonWaits(wait);
 		actions = new CommonActions(driver, waits);
 		logPage = new LogInPage(driver, actions);
-		scoresPage = new ScoresPage(driver, actions);
+		scoresPage = new ScoresPage(driver, wait, actions); // wait
 		createPage = new CreateScorePage(driver, actions);
 
 	}

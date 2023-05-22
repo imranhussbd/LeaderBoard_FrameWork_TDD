@@ -10,7 +10,7 @@ public class TestTry extends BaseClass {
 	public void logTest() throws InterruptedException {
 		logPage.logInSteps(configuration.get("user"), configuration.get("password"));
 		scoresPage.verifyLastScoreEntry("Gems", "100", "qualityengineer");
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 	}
 
 }
